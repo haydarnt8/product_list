@@ -9,7 +9,7 @@
                 </div>
                 <div class="mt-4 flex flex-col justify-between">
 
-                    <h3 class="text-sm text-gray-700">
+                    <h3 class="text-sm text-gray-700 title">
                         <a :href="product.href">
                             <span aria-hidden="true" class="absolute inset-0" />
                             {{ product.title.EN }}
@@ -21,11 +21,11 @@
                     </div>
                     <div class="flex flex-col">
                         <div v-if="product.price.original_value !== product.price.value" class="oled-price">
-                            {{ product.price.original_value }} {{ product.price.currency }}
+                            {{ parseInt(product.price.original_value).toLocaleString() }} {{ product.price.currency }}
                         </div>
                         <div class="flex justify-between">
                             <div>
-                                {{ product.price.value }} {{ product.price.currency }}
+                                {{ parseInt(product.price.value).toLocaleString() }} {{ product.price.currency }}
                             </div>
                             <div>
                                 <Color :colors="product.colors" />
@@ -43,14 +43,20 @@
 <script setup>
 const { data } = await useFetch('/api/posts')
 const products = ref(data.value)
+
 </script>
 
 <style scoped>
-* {
-    outline: slateblue solid 1px;
-}
-
 .oled-price {
     text-decoration-line: line-through;
 }
+.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 21px; /* adjust this value according to your font size */
+    max-height: 42px; /* line-height * number of lines */
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
 </style>
