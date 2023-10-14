@@ -22,7 +22,5 @@
 const { colors } = defineProps({
     colors: Array
 })
-console.log(colors.length)
-
 
 </script>
