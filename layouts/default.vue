@@ -1,9 +1,9 @@
 <template>
     <main class="flex flex-col justify-center">
         <div class="h-[30vh]  flex flex-col gap-7 justify-center items-center">
-            <h1 class="text-5xl font-bold">New Arrivals</h1>
+            <h1 class="text-5xl font-bold">Miswag New Arrivals</h1>
             <p>
-                Stay Ahead of the Curve Fresh Arrivals!
+                Stay Ahead of the Curve with Miswag's Fresh Arrivals!
             </p>
         </div>
         <CategoryNav />
