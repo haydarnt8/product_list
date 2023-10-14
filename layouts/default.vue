@@ -1,5 +1,5 @@
 <template>
-    <main class="flex flex-col justify-center">
+    <main class="flex flex-col justify-center bg-slate-100">
         <div class="h-[30vh]  flex flex-col gap-7 justify-center items-center">
             <h1 class="text-5xl font-bold">Miswag New Arrivals</h1>
             <p>
