@@ -16,8 +16,8 @@
 const router = useRouter()
 
 onMounted(() => {
-    console.log('mounted')
-    router.push({ name: 'product-id', params: { id: 1 } })
+    // console.log('mounted')
+    // router.push({ name: 'product-id', params: { id: 1 } })
     // router.push({ path: '/product/1' })
 })
 </script>
